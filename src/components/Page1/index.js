@@ -6,7 +6,7 @@ export default class Page1 extends React.Component {
 		return (
 			<div className={styles.page1}>
 				<Nav title={'page2'} path={'/page2'}/>
-				<h2>page1test</h2>
+				<h2>page1test2</h2>
 	      	</div>
 		)
 	}
