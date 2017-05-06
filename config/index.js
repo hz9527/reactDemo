@@ -1,4 +1,5 @@
 const path = require('path')
+var mock = require('./mock.js')
 
 module.exports = {
   build: {
@@ -21,5 +22,6 @@ module.exports = {
     proxyTable: {
     },
     cssSourceMap: false
-  }
+  },
+  mock
 }
