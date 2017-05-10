@@ -1,5 +1,5 @@
-import React from 'react'
-export default class Filter extends React.Component {
+import React, {Component} from 'react'
+export default class Filter extends Component {
   constructor (props) {
     console.log(props)
     super(props)
@@ -24,7 +24,7 @@ export default class Filter extends React.Component {
   render () {
     // let {text} = this.props
     return (
-      <p>{this.state.m}</p>
+      <p>{this.props.text + this.state.m}</p>
     )
   }
 }
