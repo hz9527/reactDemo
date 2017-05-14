@@ -3,10 +3,14 @@ import styles from './index.styl'
 import Nav from '../common/Nav'
 import Filter from './filter.js'
 import axios from 'axios'
-import mobx, {observer} from 'mobx-react'
+import mobx, {observer, inject} from 'mobx-react'
 import {observable} from 'mobx'
 
-console.log(mobx)
+class Count {
+	@observable count = 1
+}
+var count = new Count()
+
 // var list = observable([1, 2, 3])
 export default @observer class Page1 extends React.Component {
 	getList () {
@@ -19,7 +23,7 @@ export default @observer class Page1 extends React.Component {
 				console.log(this.state, 'after setState')
 			})
 	}
-	@observable count = 0
+	// @observable count = 0
 	constructor (props) {
 		super(props)
 		this.state = {
@@ -28,9 +32,9 @@ export default @observer class Page1 extends React.Component {
 		this.x = 3
 	}
 	componentWillMount () {
-		setInterval(() => {
-			this.count++
-		}, 2000)
+		// setInterval(() => {
+		// 	count.count++
+		// }, 2000)
 	}
 	componentWillUpdate () {
 		console.log(this.state, 'willUpdate hook')
@@ -44,7 +48,7 @@ export default @observer class Page1 extends React.Component {
 			<div className={styles.page1}>
 				<Nav title={'page2'} path={'/page2'}/>
 				<h2 onClick={this.getList.bind(this)}>{this.x}</h2>
-				<span>{this.count}</span>
+				<span>{count.count}</span>
 				<Filter ref='hh' text={this.x}></Filter>
     	</div>
 		)
