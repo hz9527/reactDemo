@@ -1,7 +1,7 @@
 目录  
 [react生命周期及接口](#生命周期及接口)  
 [关于state与props](#关于state与props)  
-[关于React与Vue](#关于React与Vue)  
+[关于React与Vue](#关于react与vue)  
 [mobx及react-mobx](#mobx及react-mobx)  
 [vuex](#vuex)
 # 关于React
